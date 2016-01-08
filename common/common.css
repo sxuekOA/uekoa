@@ -4,7 +4,7 @@ body{
 h1{
 	width:100px;
 }
-ul,ol{
+ul,ol,li{
 	padding:0;list-style:none;
 }
 a{
