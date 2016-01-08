@@ -25,6 +25,9 @@
     background-color: #FFF;
     line-height: 2em;
 }
+.header-content label{
+	display:inline-block;
+}
 .footer{
 	position: fixed;
 	left:0;bottom:0;
