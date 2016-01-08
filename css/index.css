@@ -1,0 +1,12 @@
+.top{
+	border: 1px solid #000;
+    color: #aeaeae;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: fixed;
+    right: 0;
+    text-shadow: 0 1px 0 #000;
+    top: 0;
+    z-index: 9999;
+}
