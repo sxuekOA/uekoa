@@ -31,4 +31,13 @@ body{
 	color: #6D6D6D;
 	padding: 0px 0px 20px;
 	font-size: 12px;
+	background:red;
+	box-shadow: 0px 5px 10px #AFAEAE;
+	background-color: #FFF;
+}
+.right iframe{
+	display: block;
+	width:100%;
+    min-height: 500px;
+    border:0;
 }
