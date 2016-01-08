@@ -23,6 +23,7 @@
 .header-content{
 	padding: 10px;
     background-color: #FFF;
+    line-height: 2em;
 }
 .footer{
 	position: fixed;
