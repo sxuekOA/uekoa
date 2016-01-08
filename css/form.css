@@ -1,0 +1,74 @@
+.input-text{
+	width:300px;
+	height:30px;
+	padding:0 5px;
+	display: block;
+	line-height: 30px;
+	border: 1px solid #DDDCDC;
+    -moz-box-shadow: inset 2px 1px 5px #CBC9C9;
+    -webkit-box-shadow: inset 2px 1px 5px #CBC9C9;
+    -o-box-shadow: inset 2px 1px 5px #CBC9C9;
+    box-shadow: inset 2px 1px 5px #CBC9C9;
+    background: #FFF;
+    border-radius:3px;
+}
+.input-text:checked{
+	border-radius:3px;
+}
+
+.input-button-down{
+	background-image:url(../image/arrow-down.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-button-update{
+	background-image:url(../image/arrow-up.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-button-next{
+	background-image:url(../image/arrow-right.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-button-prev{
+	background-image:url(../image/arrow-left.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-button-add{
+	background-image:url(../image/glyph-add.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-reset{
+	background-image:url(../image/glyph-remove.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;
+}
+.input-submit{
+	background-image:url(../image/glyph-check.png);
+	background-position: center; 
+	width:32px;
+	height:32px;
+	border:0px;
+	background-color:transparent;	
+}

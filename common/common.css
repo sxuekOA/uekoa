@@ -24,7 +24,8 @@ table{
 	border-collapse: separate;
 	border-spacing: 0;
 }
-tr,td,th{
+input,tr,td,th{
 	margin:0;
 	padding:0;
+	border:0;
 }
