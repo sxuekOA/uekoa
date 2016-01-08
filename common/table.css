@@ -1,0 +1,32 @@
+/*table 样式*/
+.table{
+	border-right:1px solid #ededed;
+	border-top:1px solid #ededed;
+}
+.table th{
+	background-color:#F5F5F5;
+	border-left:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	padding:10px;
+}
+.table td{
+	border-left:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	padding:10px;
+}
+.table tr:nth-of-type(odd){
+	background-color:#F7F7F7;
+}
+.table tr:hover{
+	background-color: #eeeeee;
+}
+/* 文本对齐方式 */
+.text-l{
+	text-align:left;
+}
+.text-r{
+	text-align:right;
+}
+.text-c{
+	text-align:center;
+}

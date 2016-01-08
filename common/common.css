@@ -19,3 +19,12 @@ img{
 form{
 	padding:0;
 }
+/*清除table 默认样式*/
+table{
+	border-collapse: separate;
+	border-spacing: 0;
+}
+tr,td,th{
+	margin:0;
+	padding:0;
+}
