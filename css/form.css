@@ -5,6 +5,7 @@ input{
 label{
 	height:40px;line-height: 40px;
 	padding:0 10px;
+	cursor:pointer;
 }
 .input-text{
 	width:300px;
