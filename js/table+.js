@@ -142,7 +142,7 @@ $(function(){
 		editData(atds);
 	});
 	//删除
-	$('.delete').click(function(){
+	$('.table-content .table').on("click",".delete",function(){
 		headerTitle.html('编辑');
 		urls=$(this).attr('urls');
 		var tr=$(this).parent().parent();
