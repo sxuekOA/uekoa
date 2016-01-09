@@ -68,12 +68,13 @@ input,tr,td,th{
 	background-color:#F5F5F5;
 	position: relative;
 	z-index: 2;
-	border:1px solid #ededed;
-	border-left:0;
+	border:1px solid #ddd;
 }
 .table-header th{
 	min-width:50px;
 	border-bottom: 0;
+	border-left:0;
+	border-right:1px solid #ddd;
 }
 .table-header .table{
 	border:0;
