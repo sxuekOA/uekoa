@@ -852,10 +852,12 @@
 <script src="../js/jquery.js"></script>
 <script>
 $(".wlh-yiji>p").click(function(){
+	$(this).siblings("ul").finish();
 	$(this).siblings("ul").slideToggle();
 	$(this).siblings().find("ul").slideUp();
 })
 $(".wlh-erji>li>p").click(function(){
+	$(this).siblings("ul").finish();
 	$(this).siblings("ul").slideToggle();
 	$(this).siblings().find("ul").slideUp();
 })

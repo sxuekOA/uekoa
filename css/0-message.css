@@ -1,7 +1,7 @@
 body,ul,p,li,h1,h2,h3,h4,h5,h5{
 	margin: 0;padding: 0;list-style: none;
 	font-family: "微软雅黑";
-
+    background: #fff;
 }
 img{
 	border:none;display: block;
@@ -11,7 +11,7 @@ a{
 }
 .wlh-message{
 	width: 95%;height: auto;
-	margin:0 auto;
+	margin:0 auto 15px;
 }
 h2{
 	font-size: 18px;color:#616161;
