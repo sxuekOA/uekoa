@@ -28,7 +28,7 @@ $(function(){
 	var oldVal;
 	var flag;
 	//type 值 ： show  edit
-	function showData(td,contents,type){
+	function showData(td,type){
 		var tables=[];
 		var o=0;
 		var str="";
@@ -51,7 +51,7 @@ $(function(){
 		contentTable.html(str);
 	}
 	//编辑提交数据 
-	function editData(td){
+	function editData(){
 		var inputs=$('input',contentTable);
 		inputs.each(function(i,obj){
 			$(this).data('a',i)
@@ -81,9 +81,9 @@ $(function(){
 				aths.attr('data-role',function(i,cont){
 					titles.push(cont);
 				})
+				console.log(atds);
 				for(var i in contents){
-					console.log(contents);
-					$(td[i]).html(contents[i]);
+					$(atds[i]).html(contents[i]);
 					datas[titles[i]]=contents[i];
 				}
 				/*
@@ -131,11 +131,11 @@ $(function(){
 	//编辑
 	$('.edit').click(function(){
 		contents=[];//存放内容 json
-		var that=this;
 		headerTitle.html('编辑');
 		atds=$(this).parent().parent().find('td').not(":first").not(":last");
+		console.log(atds);
 		//显示数据
-		showData(atds,contents,'edit');
+		showData(atds,'edit');
 		//编辑数据
 		$('.input-button-yes').css('display','inline-block');
 		editData(atds);
