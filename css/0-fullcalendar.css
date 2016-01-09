@@ -4,7 +4,12 @@
  * (c) 2015 Adam Shaw
  */
 
-
+.fc-agendaWeek-button{
+	display: none;
+}
+.fc-agendaDay-button{
+	display: none;
+}
 .fc {
 	direction: ltr;
 	text-align: left;
@@ -834,7 +839,7 @@ a.fc-more:hover {
 	position: relative;
 	z-index: 2; /* so the "more.." popover will be over the time grid */
 }
-
+-w
 .fc-agenda-view .fc-day-grid .fc-row {
 	min-height: 3em; /* all-day section will never get shorter than this */
 }

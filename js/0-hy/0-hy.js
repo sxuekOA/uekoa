@@ -5,4 +5,5 @@ $(function(){
 		$(this).toggleClass("hide");
 		$(".content").eq(index).slideToggle();
 	})
+
 })
