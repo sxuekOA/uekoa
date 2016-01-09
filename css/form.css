@@ -1,6 +1,14 @@
 input{
 	margin:0 10px;
 	vertical-align: middle;
+	
+}
+input[type=button]{
+	outline:none;
+}
+input:active{
+	opacity: 0.8;
+
 }
 label{
 	height:40px;line-height: 40px;
