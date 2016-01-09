@@ -57,7 +57,7 @@ body{
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    color: #AAA;
+    color: #bbb;
     text-shadow: 0px 1px #0D0D0D;
     background: #494949 url("../image/arrow.png") no-repeat scroll 96% -5px;
     border-bottom: 1px solid #313131;
@@ -88,7 +88,7 @@ body{
     font-weight: normal;
     font-size: 1em;
     background: transparent url("../image/sideli.png") no-repeat scroll 37px 10px;
-    color: #949090;
+    color: #bbb;
     transition:color ease .5s;
 }
 .left>ul>li>ul>li a:hover{
