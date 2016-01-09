@@ -28,8 +28,8 @@ h4{
 	line-height: 32px;
 }
 .head img{
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	
 	vertical-align: middle;
 
 }
@@ -153,6 +153,11 @@ h4{
 	padding:8px 0 3px;
 	padding-left: 5px;
 	border-bottom: 1px solid #DADBDD;
+}
+tr:hover td {
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #CACACA;
+    border-top: 1px solid #E2E2E2;
 }
 .noalt h4{
 	font-size: 20px;
