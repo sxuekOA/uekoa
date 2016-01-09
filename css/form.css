@@ -1,5 +1,10 @@
 input{
 	margin:0 10px;
+	vertical-align: middle;
+}
+label{
+	height:40px;line-height: 40px;
+	padding:0 10px;
 }
 .input-text{
 	width:300px;
@@ -246,10 +251,7 @@ input{
 .button-bottom .daxiao{
 	margin:7px 5px; 
 }
-label{
-	height:40px;line-height: 40px;
-	padding:0 10px;
-}
+
 /*信息提示*/
 .success{
 	width:100%;
