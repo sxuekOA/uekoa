@@ -1,9 +1,13 @@
 body,ul,p,li,h1,h2,h3,h4,h5,h5{
 	margin: 0;padding: 0;list-style: none;
 	font-family: "微软雅黑";
+
 }
 img{
 	border:none;display: block;
+}
+a{
+	color:#333;
 }
 .wlh-message{
 	width: 95%;height: auto;
@@ -37,6 +41,9 @@ legend{
 	font-weight: bold;
 	color:#626262;text-align: center;
 }
+tr.wlh-tdbg{
+	background: #fff;
+}
 tr.wlh-tdbg:hover{
     background: #fff;
 }
@@ -59,11 +66,11 @@ tr.wlh-tdbg:hover{
 /*角色部分 end*/
 
 /*机构部分 start*/
-.wlh-jueseli:hover{
-   font-weight: bold;
+.wlh-jueseli>a:hover{
+   color:#71ade5;
 }
 /*菜单*/
-.wlh-yiji{height: auto;padding-left: 9px;}
+.wlh-yiji{height: auto;padding-left: 9px;cursor: default}
 .wlh-yiji li{
 	padding-left: 9px;
 }
