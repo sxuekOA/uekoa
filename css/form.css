@@ -327,4 +327,7 @@ label{
 	width:18px;
 	height:14px;
 	margin:0 3px;
+	background-size:auto 100%;
+
+	background-repeat: no-repeat;
 }
