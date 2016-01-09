@@ -2,7 +2,6 @@
 	width:300px;
 	height:30px;
 	padding:0 5px;
-	display: block;
 	line-height: 30px;
 	border: 1px solid #DDDCDC;
     -moz-box-shadow: inset 2px 1px 5px #CBC9C9;
@@ -22,6 +21,7 @@
 	width:16px;
 	height:22px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-update{
@@ -30,6 +30,7 @@
 	width:16px;
 	height:22px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-next{
@@ -38,6 +39,7 @@
 	width:22px;
 	height:16px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-prev{
@@ -46,6 +48,7 @@
 	width:22px;
 	height:16px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-add{
@@ -54,6 +57,7 @@
 	width:17px;
 	height:22px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-fileadd{
@@ -62,6 +66,7 @@
 	width:20px;
 	height:17px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-fileremove{
@@ -70,6 +75,7 @@
 	width:20px;
 	height:17px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-delete{
@@ -78,6 +84,7 @@
 	width:20px;
 	height:17px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;
 }
 .input-button-submit{
@@ -86,6 +93,7 @@
 	width:22px;
 	height:16px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;	
 }
 .input-button-guolv{
@@ -95,19 +103,21 @@
 	width:20px;
 	height:21px;
 	border:0px;
+	cursor:pointer;
 	background-color:transparent;	
 }
 .input-button-resetguolv{
 	background-image:url(../image/search-remove.png);
 	background-position: center;
 	background-size: cover;
-
+	cursor:pointer;
 	width:20px;
 	height:21px;
 	border:0px;
 	background-color:transparent;	
 }
 .input-button-refresh{
+	cursor:pointer;
 	background-image:url(../image/refresh.png);
 	background-position: center; 
 	background-size: cover;
@@ -150,8 +160,9 @@
 	margin: 5px auto;
 	box-sizing:border-box;
 	border: 1px solid #DDDCDC;
-	background: transparent;
+	background: #fff;
 	line-height: 36px;
+
 }
 .button-bottom .select{
 	width:60px;
