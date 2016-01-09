@@ -177,18 +177,20 @@ label{
     box-shadow: inset 2px 1px 5px #50BFFC;
     background: #5FBFF5;
     border-radius:3px;
+    color: #fff;
 }
 .input-button-no{
+	color: #fff;
 	width:60px;
 	height: 30px;
 	font-weight: bold;
 	line-height: 30px;
-	border: 1px solid #50BFFC;
-    -moz-box-shadow: inset 2px 1px 5px #50BFFC;
-    -webkit-box-shadow: inset 2px 1px 5px #50BFFC;
-    -o-box-shadow: inset 2px 1px 5px #50BFFC;
-    box-shadow: inset 2px 1px 5px #50BFFC;
-    background: #5FBFF5;
+	border: 1px solid #FFb19E;
+    -moz-box-shadow: inset 2px 1px 5px #FFc19E;
+    -webkit-box-shadow: inset 2px 1px 5px #FFc19E;
+    -o-box-shadow: inset 2px 1px 5px #FFc19E;
+    box-shadow: inset 2px 1px 5px #FFc19E;
+    background: #FFA19E;
     border-radius:3px;
 }
 
