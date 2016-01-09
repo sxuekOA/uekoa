@@ -81,7 +81,6 @@ $(function(){
 				aths.attr('data-role',function(i,cont){
 					titles.push(cont);
 				})
-				console.log(atds);
 				for(var i in contents){
 					$(atds[i]).html(contents[i]);
 					datas[titles[i]]=contents[i];
@@ -133,7 +132,6 @@ $(function(){
 		contents=[];//存放内容 json
 		headerTitle.html('编辑');
 		atds=$(this).parent().parent().find('td').not(":first").not(":last");
-		console.log(atds);
 		//显示数据
 		showData(atds,'edit');
 		//编辑数据
