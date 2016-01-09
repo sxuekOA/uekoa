@@ -7,6 +7,6 @@ $(".left>ul>li>ul a").click(function(e){
 	e.stopPropagation()	
 	 $(".left>ul a").removeClass("active")
 	 $(this).addClass("active")
-	 $(this).parent().find("ul").stop();
+	 $(this).parent().find("ul").finish();
 	 $(this).parent().find("ul").slideToggle()
 })
