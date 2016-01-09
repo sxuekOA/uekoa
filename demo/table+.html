@@ -29,7 +29,8 @@
       	 	</label>
       	 	<br>
       	 	<label>
-      	 	    添加<input type="button" class="input-button-fileadd">
+      	 	<!-- 添加数据按钮  需增加类名 add-table -->
+      	 	    添加<input type="button" class="input-button-fileadd add-table" urls='http://127.0.0.1/add.jsp'>
       	 	</label>
       	 	<label>
       	 	    导入<input type="button" class="input-button-down">
@@ -85,8 +86,8 @@
 						删除功能 添加类名 delete
 					-->
 					<input type="button" class="input-button-guolv small view">
-					<input type="button" class="input-button-wirte small edit">
-					<input type="button" class="input-button-fileremove small delete">
+					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
 				</td>
 			</tr>
 			<!-- 第1行 结束 -->
@@ -111,8 +112,8 @@
 						删除功能 添加类名 delete
 					-->
 					<input type="button" class="input-button-guolv small view">
-					<input type="button" class="input-button-wirte small edit">
-					<input type="button" class="input-button-fileremove small delete">
+					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
 				</td>
 			</tr>
 			<!-- 第2行 结束 -->
@@ -135,8 +136,8 @@
 						删除功能 添加类名 delete
 					-->
 					<input type="button" class="input-button-guolv small view">
-					<input type="button" class="input-button-wirte small edit">
-					<input type="button" class="input-button-fileremove small delete">
+					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
 				</td>
 			</tr>
 
@@ -159,8 +160,8 @@
 						删除功能 添加类名 delete
 					-->
 					<input type="button" class="input-button-guolv small view">
-					<input type="button" class="input-button-wirte small edit">
-					<input type="button" class="input-button-fileremove small delete">
+					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
 				</td>
 			</tr>
 
@@ -183,8 +184,8 @@
 						删除功能 添加类名 delete
 					-->
 					<input type="button" class="input-button-guolv small view">
-					<input type="button" class="input-button-wirte small edit">
-					<input type="button" class="input-button-fileremove small delete">
+					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
 				</td>
 			</tr>
 		</table>
@@ -219,30 +220,7 @@
       	 <div class="header-content">
       	 	<!--content 在此-->
       	 	<table class="tables text-l">
-				<tr>
-					<th>&nbsp;</th>
-					<th>Title</th>
-					<th>Author</th>
-					<th>Catégories</th>
-					<th>Tags</th>
-					<th>Actions</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Lorem ipsum</td>
-					<td>Grafikart	Dolor</td>
-					<td>Amet	Consecte</td>
-					<td>Adipiscin</td>
-					<td>Elit</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Lorem ipsum</td>
-					<td>Grafikart	Dolor</td>
-					<td>Amet	Consecte</td>
-					<td>Adipiscin</td>
-					<td>Elit</td>
-				</tr>
+      	 	<!--内容 js读写-->
 			</table>
       	 </div>
       	 <div class="alert-btn">
@@ -250,7 +228,7 @@
       	 		button 在此
       	 		urls ajax 提交后台地址
       	 	-->
-      	 	<input type="button" class="input-button-yes" value="确定" urls="127.0.0.1">
+      	 	<input type="button" class="input-button-yes" value="确定">
 			<input type="button" class="input-button-no" value="取消">
 	
       	 </div>	 
