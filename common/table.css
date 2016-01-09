@@ -30,3 +30,30 @@
 .text-c{
 	text-align:center;
 }
+
+/*页面 表格样式*/
+/*表头*/
+.table-header{
+	background-color:#F5F5F5;
+	position: relative;
+	z-index: 2;
+	border:1px solid #ededed;
+	border-left:0;
+}
+.table-header th{
+	min-width:100px;
+	border-bottom: 0;
+}
+.table-header .table{
+	border:0;
+}
+.table .table-number{
+	min-width:auto;
+}
+.table-content{
+	margin-top:-1px;
+	overflow: auto;
+}
+.table-content td{
+	min-width:100px;
+}
