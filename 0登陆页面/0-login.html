@@ -6,28 +6,41 @@
 	<link rel="stylesheet" href="../css/0-login.css">
 </head>
 <body>
+	<!--logo start-->
 	<div class="wlh-heardbox">
 		<img src="../image/logo1-0.png" alt="">
 	</div>
+	<!--logo end-->
+	<!--内容 start-->
 	<div class="wlh-conbox">
 		<div class="wlh-con">
 			<h3>欢迎您，请先登录!</h3>
 			<form action="" method="get" name="myform">
+
 				<div class="wlh-line">
-					<p class="wlh-word">用户名:</p><div class="wlh-text"><img src="../image/usename-0.png" alt=""><input type="text" size="30" name="usename"></div>
+					<p class="wlh-word">用<span style="margin-left:8px">户</span><span style="margin-left:8px">名:</span></p>
+					<div class="wlh-text">
+						<!--用户名输入-->
+						<img src="../image/usename-0.png" alt=""><input type="text" size="30" name="usename">
+					</div>
 				</div>
 				
 				<div class="wlh-line">
-					<p class="wlh-word">密<span>码:</span></p><div class="wlh-text"><img src="../image/password-0.png" alt=""><input type="password" name="password" size="30"></div>
+					<p class="wlh-word">密<span>码:</span></p>
+					<div class="wlh-text">
+						<!--密码输入-->
+						<img src="../image/password-0.png" alt=""><input type="password" name="password" size="30">
+					</div>
 				</div>
-	            
+	            <!--登录按钮-->
 	            <input class="wlh-submit wlh-login" type="submit" value="登&nbsp;&nbsp;录">
+	            <!--注册按钮-->
 	            <input class="wlh-submit wlh-register" type="submit" value="注&nbsp;&nbsp;册">
 	           
 			</form>
-		</div>
-		
+		</div>		
 	</div>
+	<!--内容 end-->
 	<script>
 var wlhtext=document.getElementsByClassName("wlh-text");
 
