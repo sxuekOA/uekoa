@@ -191,7 +191,13 @@ $(function(){
 				aths.attr('data-role',function(i,cont){
 					titles.push(cont);
 				});
-				var conts='<td class="table-number">'+($('.table-number:last').html()*1+1)+"</td>";
+				var nums;
+				if($('.table-number:last').html()){
+					nums=$('.table-number:last').html()*1+1;
+				}else{
+					nums=1;
+				}
+				var conts='<td class="table-number">'+nums+"</td>";
 				for(var i=0;i<aths.length;i++){
 					if(!contents[i]){
 						contents[i]='';
