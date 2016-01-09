@@ -1,0 +1,18 @@
+.alert-box{
+	width:500px;
+	min-height: 150px;
+	height: auto;
+	position: absolute;
+	z-index: 999999;
+	margin:auto;
+	top:35%;
+	left:0;
+	right: 0;
+}
+.alert-btn{
+	padding:10px 0;
+	text-align: center;
+}
+.header-title{
+	color: #f1f1f1;
+}
