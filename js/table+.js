@@ -43,7 +43,7 @@ $(function(){
 			if(type=='edit'){
 				str+="<td><span style='float:left;'>"+title+"</span><input type='text' value='"+cont+"' style='float:right;'></td>";
 			}else{
-				str+="<td><span style='float:left;'>"+title+"</span><span style='float:right;'>"+cont+"</span></td>";
+				str+="<td><span style='float:left;'>"+title+"</span><span style='float:right;width:160px;text-align:left;border-left:1px solid #f6f6f6;padding-left:5px;margin-left:5px;'>"+cont+"</span></td>";
 			}
 			o++;
 			if(o==2){str+="</tr>";o=0;}	
@@ -123,7 +123,7 @@ $(function(){
 		$('.input-button-yes').css('display','none');
 		atds=$(this).parent().parent().find('td').not(":first").not(":last");
 		//显示数据
-		showData(atds,contents,'edit');
+		showData(atds,contents,'show');
 		$('.input-button-no').click(function(){
 			alertBox.css('display','none');
 		})
