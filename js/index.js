@@ -1,6 +1,6 @@
 $(".left>ul>li").click(function(){
-	$(this).find("ul").slideToggle()
-	$(this).siblings().find("ul").slideUp()
+	$(this).children("ul").slideToggle()
+	$(this).siblings().children("ul").slideUp()
 })
 $(".left>ul>li>ul a").click(function(e){
 	e.stopPropagation()	

@@ -45,6 +45,7 @@ body{
 	background-color: #494949;
 	border-right: 1px solid #1B1B1B;
 	box-shadow: -5px 0px 5px #404040 inset;
+    overflow:auto;
 }
 .left>ul{}
 .left>ul>li{}
@@ -78,7 +79,7 @@ body{
 .left>ul>li>ul{
     display: none;
 }
-.left>ul>li>ul>li>a{
+.left>ul>li>ul>li a{
     height: 28px;
     line-height: 28px;
     text-indent: 52px;
@@ -90,13 +91,24 @@ body{
     color: #949090;
     transition:color ease .5s;
 }
-.left>ul>li>ul>li>a:hover{
+.left>ul>li>ul>li a:hover{
     background-position: 37px -31px;
     color:#fff;
 }
-.left>ul>li>ul>li>a.active{
-   background-position: 37px -31px;
+.left>ul>li>ul>li a.active{
+  
+}
+.left>ul>li>ul>li>ul>li>a{
+    text-indent: 82px;
+    background: transparent url("../image/sideli.png") no-repeat scroll 67px 10px;
+}
+.left>ul>li>ul>li>ul>li>a:active{
+    background-position: 67px -31px;
    color:#fff; 
+}
+.left>ul>li>ul>li>ul>li>a:hover{
+    background-position: 67px -31px;
+    color:#fff;
 }
 .right{
 	margin: 58px 40px 0px 280px;
@@ -107,6 +119,6 @@ body{
 .right iframe{
 	display: block;
 	width:100%;
-    min-height: 500px;
+    min-height: 550px;
     border:0;
 }
