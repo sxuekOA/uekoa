@@ -3,7 +3,9 @@
  * Docs & License: http://fullcalendar.io/
  * (c) 2015 Adam Shaw
  */
-
+.fc-month-button{
+	display: none;
+}
 .fc-agendaWeek-button{
 	display: none;
 }
