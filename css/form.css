@@ -8,7 +8,6 @@ input[type=button]{
 }
 input:active{
 	opacity: 0.8;
-
 }
 label{
 	height:40px;line-height: 40px;
@@ -323,4 +322,9 @@ label{
     height: 13px;
     display: block;
     background: url(../image/close.png);
+}
+.small{
+	width:18px;
+	height:14px;
+	margin:0 3px;
 }
