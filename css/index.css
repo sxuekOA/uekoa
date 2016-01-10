@@ -119,6 +119,7 @@ body{
 	color: #6D6D6D;
 	font-size: 12px;
 	box-shadow: 0px 5px 10px #AFAEAE;
+    position: relative;
 }
 .right iframe{
 	display: block;
@@ -126,3 +127,61 @@ body{
     min-height: 550px;
     border:0;
 }
+.right .righttop{
+    width:100%;height:35px;
+    position:absolute;
+    top:0;
+    z-index:999999;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url("../image/bg.jpg") repeat scroll 0 0;
+}
+.righttop .righttopinner{
+    height:35px;position: absolute;background:red;
+}
+.right .rightbottom{
+    width:100%;height:550px;position: relative;
+}
+.right .rightbottom .item{
+    width:100%;height:550px;position: absolute;
+    left:0;top:0;
+}
+.righttopbut{
+    width:150px;height:35px;float:left;
+    position: relative;
+    background:#333;
+    text-align: center;
+    line-height: 35px;
+    color:#fcfcfc;
+    cursor: pointer;
+    border-right:1px solid #666;
+}
+.righttopbut .rrrclosebtn{
+    width:15px;height:15px;
+    position: absolute;
+    right:7px;top:12px;
+    background:url(../image/close.png) no-repeat;
+    cursor: pointer;
+}
+.butactive{
+   background:#777; 
+}
+.righttopdir{
+   width:40px;height:35px;position: absolute;
+   right:0;top:0;
+   background:#333; 
+   z-index: 998;
+   display: none;
+}
+.righttopdir .dirleft,.righttopdir .dirright{
+    width:20px;height:35px;float:left;
+    text-align: center;line-height: 35px;
+    color:#ddd;
+    font-weight: bold;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+
+
+
+
