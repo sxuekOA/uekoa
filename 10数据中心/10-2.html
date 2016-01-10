@@ -19,8 +19,10 @@
       	 		指纹编号<input type="text" class="input-text">
       	 	</label>
       	 	<label>
-      	 		打卡时间<input type="datetime-local" class="input-text" style="width:176px">-<input type="datetime-local" class="input-text" style="width:176px">
-      	 	</label>
+      	 		打卡时间<input type="text" id="beginTime" class="input-text">
+      	 	</label><label><!-- 此处两个label必须挨着 -->
+      	 		--<input type="text" id="endTime" class="input-text">
+      	    </label>
       	 	<label>
       	 		过滤<input type="button" class="input-button-guolv">
       	 	</label>
@@ -159,4 +161,14 @@
       	 </div>	 
     	</div>
 </body>
+<script src="../js/rome.js"></script>
+<script>
+	$(function(){
+				//去除边距
+		  $("#beginTime").parent().css({"margin-right":"0","padding-right":"0"});
+		  $("#endTime").parent().css({"margin-left":"0","padding-left":"0"});
+		  rome(beginTime);
+		  rome(endTime);
+		})
+</script>
 </html>
