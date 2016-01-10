@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>上月考勤</title>
+	<title>班级每日成绩</title>
 	<link rel="stylesheet" href="../common/common.css">
+	<link rel="stylesheet" href="../css/7-1-1.css">
+
 	<!-- <link rel="stylesheet" href="../css/demo.css">
 	<link rel="stylesheet" href="../common/table.css">
 	<link rel="stylesheet" href="../css/form.css">
@@ -12,27 +14,54 @@
 	<script src="../js/table+.js"></script>
 </head>
 <body class="content-box">
-     
+      <div class="header">
+      	 <div class="header-title">班级每日成绩</div>
+      	 <div class="header-content">
+      	 	<label>
+      	 		班级<input type="text" class="input-text">
+      	 	</label>
+      	 	<label>
+      	 		方向<select name="" id="" class="select">
+			<option value="">WEBUI</option>
+			<option value="">MUI</option>
+			<option value="">PHP</option>
+			
+			</select>
+      	 	</label>
+      	 	<label>
+      	 		过滤<input type="button" class="input-button-guolv">
+      	 	</label>
+      	 	<label>
+      	 		重置过滤<input type="button" class="input-button-resetguolv">
+      	 	</label>
+      	 	<br>
+      	 	<label>
+      	 	<!-- 添加数据按钮  需增加类名 add-table --> 
+      	 	    添加<input type="button" class="input-button-fileadd add-table" urls='http://127.0.0.1/add.jsp'>
+      	 	</label>
+      	 	<label>
+      	 	    导入<input type="button" class="input-button-down">
+      	 	</label>
+      	 	<label>
+      	 	    导出<input type="button" class="input-button-update">
+      	    </label>
+      	 </div>
+      </div>
       <div class="content">
-      	 <div class="header-title">上月考勤</div>
+      	 <div class="header-title">班级每日成绩</div>
       	 <div class="header-content">
       	 <!-- 表头部分 开始-->
       	 <div class="table-header">
       	 	<table class="table text-l">
       	 		<tr>
 					<th class="table-number">&nbsp;</th>
-					<th data-role="xm">姓名</th>
-					<th data-role="ycqs">应出勤数</th>
-					<th data-role="sjcq">实际出勤</th>
-					<th data-role="rq">日期</th>
-					<th data-role="sw">上午</th>
-					<th data-role="xw">下午</th>
-					<th data-role="ckxq">查看详情</th>
-					<th data-role="wdk">未打卡</th>
-					<th data-role="tx">调休</th>
-					<th data-role="cc">出差</th>
-					<th data-role="qj">请假</th>
-					<th data-role="ssbm">所在部门</th>
+					<th data-role="xsbh">学生编号</th>
+					<th data-role="xsxm">姓名</th>
+					<th data-role="cj">成绩</th>
+					<th data-role="dkls">代课老师</th>
+					<th data-role="jrzj">今日总结</th>
+					<th data-role="bz">备注</th>
+					<th data-role="cz">操作</th>
 					
 				</tr>
       	 	</table>
@@ -44,134 +73,105 @@
       	 	<!-- 第1行 开始 -->	
 			<tr>
 				<td class="table-number">1</td> <!--编号-->
+				<td>2fde-3489-erer-opkf-001</td>
 				<td>张三</td>
-				<td>20</td>
-				<td>20</td>
-				<td>2016-1-10</td>
-				<td>Y</td>
-				<td>N</td>
-				<td>8:30</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>实训部前端组</td>
-				<!-- <td> -->
+				<td>A</td>
+				<td>李四老师</td>
+				<td>今日总结</td>
+				<td>备注内容</td>
+				
+				<td>
 					<!--
 						编辑功能 添加类名 edit
 						查看功能 添加类名 view
 						删除功能 添加类名 delete
 					-->
-					<!-- <input type="button" class="input-button-guolv small view">
+					<input type="button" class="input-button-guolv small view">
 					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
 					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
-				</td> -->
+				</td>
 			</tr>
 			<!-- 第1行 结束 -->
 
 			<!-- 第2行 开始 -->	
 			<tr>
 				<td class="table-number">2</td> <!--编号-->
+				<td>2fde-3489-erer-opkf-001</td>
 				<td>张三</td>
-				<td>20</td>
-				<td>20</td>
-				<td>2016-1-10</td>
-				<td>Y</td>
-				<td>N</td>
-				<td>8:30</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>实训部前端组</td>
-				<!-- <td> -->
+				<td>A</td>
+				<td>李四老师</td>
+				<td>今日总结</td>
+				<td>备注内容</td>
+				<td>
 					<!--
 						编辑功能 添加类名 edit
 						查看功能 添加类名 view
 						删除功能 添加类名 delete
 					-->
-					<!-- <input type="button" class="input-button-guolv small view">
+					<input type="button" class="input-button-guolv small view">
 					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
 					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
-				</td> -->
+				</td>
 			</tr>
 			<!-- 第2行 结束 -->
 			<tr>
 				<td class="table-number">3</td> <!--编号-->
+				<td>2fde-3489-erer-opkf-001</td>
 				<td>张三</td>
-				<td>20</td>
-				<td>20</td>
-				<td>2016-1-10</td>
-				<td>Y</td>
-				<td>N</td>
-				<td>8:30</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>实训部前端组</td>
-				<!-- <td> -->
+				<td>A</td>
+				<td>李四老师</td>
+				<td>今日总结</td>
+				<td>备注内容</td>
+				<td>
 					<!--
 						编辑功能 添加类名 edit
 						查看功能 添加类名 view
 						删除功能 添加类名 delete
 					-->
-					<!-- <input type="button" class="input-button-guolv small view">
+					<input type="button" class="input-button-guolv small view">
 					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
-					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'> -->
-				<!-- </td> -->
+					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
+				</td>
 			</tr>
 
 			<tr>
 				<td class="table-number">4</td> <!--编号-->
+				<td>2fde-3489-erer-opkf-001</td>
 				<td>张三</td>
-				<td>20</td>
-				<td>20</td>
-				<td>2016-1-10</td>
-				<td>Y</td>
-				<td>N</td>
-				<td>8:30</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>实训部前端组</td>
-				<!-- <td> -->
+				<td>A</td>
+				<td>李四老师</td>
+				<td>今日总结</td>
+				<td>备注内容</td>
+				<td>
 					<!--
 						编辑功能 添加类名 edit
 						查看功能 添加类名 view
 						删除功能 添加类名 delete
 					-->
-					<!-- <input type="button" class="input-button-guolv small view">
+					<input type="button" class="input-button-guolv small view">
 					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
 					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
-				</td> -->
+				</td>
 			</tr>
 
 			<tr>
 				<td class="table-number">5</td> <!--编号-->
+				<td>2fde-3489-erer-opkf-001</td>
 				<td>张三</td>
-				<td>20</td>
-				<td>20</td>
-				<td>2016-1-10</td>
-				<td>Y</td>
-				<td>N</td>
-				<td>8:30</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>实训部前端组</td>
-				<!-- <td> --> 
+				<td>A</td>
+				<td>李四老师</td>
+				<td>今日总结</td>
+				<td>备注内容</td>
+				<td>
 					<!--
 						编辑功能 添加类名 edit
 						查看功能 添加类名 view
 						删除功能 添加类名 delete
 					-->
-					<!-- <input type="button" class="input-button-guolv small view">
+					<input type="button" class="input-button-guolv small view">
 					<input type="button" class="input-button-wirte small edit"  urls='http://127.0.0.1/edit.jsp'>
 					<input type="button" class="input-button-fileremove small delete"  urls='http://127.0.0.1/delete.jsp'>
-				</td> -->
+				</td>
 			</tr>
 		</table>
       	 </div>
