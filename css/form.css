@@ -15,7 +15,7 @@ label{
 	cursor:pointer;
 }
 .input-text{
-	width:300px;
+	width:200px;
 	height:30px;
 	padding:0 5px;
 	line-height: 30px;
@@ -277,6 +277,10 @@ label{
    	vertical-align:center;
 
 }
+.success b{
+	color:#000;
+	font-size: 1.5em;
+}
 .faild{
 	width:100%;
 	height:auto;
@@ -290,6 +294,10 @@ label{
    	position: relative;
    	
 }
+.faild b{
+	color:#000;
+	font-size: 1.5em;
+}
 .waring{
 	width:100%;
 	height:auto;
@@ -302,6 +310,10 @@ label{
    	box-shadow: 0px 2px 3px #AFAEAE;
    	position: relative;
 }
+.waring b{
+	color:#000;
+	font-size: 1.5em;
+}
 .information{
 	width:100%;
 	height:auto;
@@ -313,6 +325,10 @@ label{
    	border-radius: 8px;
    	box-shadow: 0px 2px 3px #AFAEAE;
    	position: relative;
+}
+.information b{
+	color:#000;
+	font-size: 1.5em;
 }
 .close{
 	position: absolute;
@@ -328,6 +344,5 @@ label{
 	height:14px;
 	margin:0 3px;
 	background-size:auto 100%;
-
 	background-repeat: no-repeat;
 }
