@@ -183,7 +183,11 @@ label{
 	cursor:pointer;
 }
 .input-text{
+<<<<<<< HEAD
 	width:130px;
+=======
+	width:200px;
+>>>>>>> origin/master
 	height:30px;
 	padding:0 5px;
 	line-height: 30px;
