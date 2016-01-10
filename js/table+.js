@@ -17,13 +17,15 @@ $(function(){
 	tds.width(function(index,width){
 		ths.eq(index).width(width);
 	});
-
+	var tableContent=$('.table-content .table');
 	//按钮处理
 	var alertBox=$('.alert-box');
 	var headerTitle=$('.header-title',alertBox);
 	var aths=$('.table-header th').not(":first").not(":last");
 	var atds;
 	var contentTable=$('.tables',alertBox);
+	var nobtn=$('.input-button-no');
+	var yesbtn=$('.input-button-yes');
 	//编辑按钮
 	var oldVal;
 	var flag;
@@ -73,7 +75,7 @@ $(function(){
 			};
 			
 		});
-		$('.input-button-yes').click(function(){
+		yesbtn.click(function(){
 			$(this).off()
 			if(flag){
 				var datas={};
@@ -104,7 +106,7 @@ $(function(){
 			}
 			flag=false;
 		})
-		$('.input-button-no').click(function(){
+		nobtn.click(function(){
 			$(this).off();
 			for(var i=0;i<oldVal.length;i++){
 				$(atds[i]).html(oldVal[i]);	
@@ -117,20 +119,20 @@ $(function(){
 	var contents;
 	var urls;
 	//查看
-	$('.view').click(function(){
+	tableContent.on("click",'.view',function(){
 		contents=[];//存放内容 json
 		var that=this;
 		headerTitle.html('查看');
-		$('.input-button-yes').css('display','none');
+		yesbtn.css('display','none');
 		atds=$(this).parent().parent().find('td').not(":first").not(":last");
 		//显示数据
 		showData(atds,'show');
-		$('.input-button-no').click(function(){
+		nobtn.click(function(){
 			alertBox.css('display','none');
 		})
 	})
 	//编辑
-	$('.edit').click(function(){
+	tableContent.on("click",'.edit',function(){
 		contents=[];//存放内容 json
 		urls=$(this).attr('urls');
 		headerTitle.html('编辑');
@@ -138,11 +140,11 @@ $(function(){
 		//显示数据
 		showData(atds,'edit');
 		//编辑数据
-		$('.input-button-yes').css('display','inline-block');
+		yesbtn.css('display','inline-block');
 		editData(atds);
 	});
 	//删除
-	$('.table-content .table').on("click",".delete",function(){
+	tableContent.on("click",".delete",function(){
 		headerTitle.html('编辑');
 		urls=$(this).attr('urls');
 		var tr=$(this).parent().parent();
@@ -158,7 +160,7 @@ $(function(){
 	$('.add-table').click(function(){
 		var that=this;
 		flag=false;
-		$('.input-button-yes').css('display','inline-block');
+		yesbtn.css('display','inline-block');
 		contents=[];//存放内容 
 		urls=$(this).attr('urls');
 		headerTitle.html('添加');
@@ -184,15 +186,15 @@ $(function(){
 				contents[$(this).data('a')]=vals;
 			};	
 		});
-		$('.input-button-yes').click(function(){
+		yesbtn.click(function(){
 			if(flag){
 				var datas={};
 				var titles=[];
 				aths.attr('data-role',function(i,cont){
 					titles.push(cont);
 				});
-				var nums;
-				if($('.table-number:last').html()){
+				var nums=1;
+				if($('.table-number:last').html()!="&nbsp;"){
 					nums=$('.table-number:last').html()*1+1;
 				}else{
 					nums=1;
@@ -227,7 +229,7 @@ $(function(){
 			}
 			$(this).off()
 		})
-		$('.input-button-no').click(function(){
+		nobtn.click(function(){
 			alertBox.css('display','none');
 			$(this).off()
 		})
