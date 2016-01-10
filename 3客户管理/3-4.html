@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="../common/common.css">
-	<link rel="stylesheet" href="../css/1-3.css">
 	<!-- <link rel="stylesheet" href="../css/demo.css">
 	<link rel="stylesheet" href="../common/table.css">
 	<link rel="stylesheet" href="../css/form.css">
@@ -12,32 +11,22 @@
 	<script src="../js/jquery.js"></script>
 	<script src="../js/table+.js"></script>
 	<script src="../js/rome.js"></script>
-	<script src="../js/1-3.js"></script>
+	<script src="../js/3-4.js"></script>
+
 </head>
 <body class="content-box">
       <div class="header">
       	 <div class="header-title">输入区域</div>
       	 <div class="header-content">
       	 	<label>
-      	 		登陆<input type="text" class="input-text">
+      	 		高校名称<input type="text" class="input-text">
       	 	</label>
       	 	<label>
-      	 		姓名<input type="text" class="input-text">
+      	 		院系名称<input type="text" class="input-text">
       	 	</label>
       	 	<label>
-
-      	 		性别<select name="" id="" class="select select-small">
-      	 				<option value="">请选择</option>
-						<option value="">男</option>
-						<option value="">女</option>
-					</select>
-      	 	</label><br/>
-      	 	<label>
-      	 		创建时间<input type="text" id="beginTime" class="input-text">
-      	 	</label><label><!-- 此处两个label必须挨着 -->
-      	 		--<input type="text" id="endTime" class="input-text">
+      	 		专业名称<input type="text" class="input-text">
       	 	</label>
-      	 	
       	 	<label>
       	 		过滤<input type="button" class="input-button-guolv">
       	 	</label>
@@ -45,6 +34,28 @@
       	 		重置过滤<input type="button" class="input-button-resetguolv">
       	 	</label>
       	 	<br>
+      	 	<label>
+      	 		年级<input type="text" class="input-text">
+      	 	</label>
+      	 	<label>
+      	 		学期<input type="text" class="input-text">
+      	 	</label>
+      	 	<label>
+      	 		课程<input type="text" class="input-text">
+      	 	</label>
+      	 	<br/>
+      	 	<label>
+      	 		开始周数<input type="text" id="beginTime1" class="input-text">
+      	 	</label><label><!-- 此处两个label必须挨着 -->
+      	 		--<input type="text" id="endTime1" class="input-text">
+      		</label>
+      		<br/>
+      		<label>
+      	 		结束周数<input type="text" id="beginTime2" class="input-text">
+      	 	</label><label><!-- 此处两个label必须挨着 -->
+      	 		--<input type="text" id="endTime2" class="input-text">
+      	</label>
+      	 	<br/>
       	 	<label>
       	 	<!-- 添加数据按钮  需增加类名 add-table -->
       	 	    添加<input type="button" class="input-button-fileadd add-table" urls='http://127.0.0.1/add.jsp'>
