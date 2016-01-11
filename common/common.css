@@ -64,29 +64,28 @@ input,tr,td,th{
 
 /*页面 表格样式*/
 /*表头*/
-.table-header{
+/*.table-header{
 	background-color:#F5F5F5;
 	position: relative;
 	z-index: 2;
 	border:1px solid #ddd;
+}*/
+.table-content{
+	overflow:auto;
+}
+.table-content .table{
+	border-top:0;
 }
 .table-header th{
-	min-width:50px;
-	border-bottom: 0;
-	border-left:0;
-	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+	position: relative;
+	z-index: 2;
 }
-.table-header .table{
-	border:0;
+.table-content .table-number{
+	min-width: auto;
 }
-.table .table-number{
-	min-width:auto;
-}
-.table-content{
-	margin-top:-1px;
-	overflow: auto;
-}
-.table-content td{
+.table-content td,
+.table-content th{
 	min-width:50px;
 }
 .alert-box{
@@ -144,7 +143,7 @@ input,tr,td,th{
 	border: medium none;
 	height: 35px;
 	position: relative;
-	background: transparent url("../image/bg.jpg") repeat scroll 0% 0%;
+	background: transparent url("../image/bloctitle.png") repeat scroll 0% 0%;
 	line-height: 34px;
 	padding: 0px 10px;
 	font-size: 15px;
@@ -529,11 +528,9 @@ label{
   padding: 10px;
   text-align: center;
   z-index: 10;
-  font-family:helvetica;
 }
 .rd-container td,th{
 	padding:3px 4px;
-
 }
 .rd-container-attachment {
   position: absolute;

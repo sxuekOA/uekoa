@@ -45,9 +45,9 @@
 	border-left:0;
 	border-right:1px solid #ddd;
 }
-.table-header .table{
+/*.table-header .table{
 	border:0;
-}
+}*/
 .table .table-number{
 	min-width:auto;
 }

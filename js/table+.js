@@ -9,7 +9,7 @@ $(function(){
 	var chc=clientH-headerH-hth-20;
 	var tableCnt=$('.content .table-content');
 	$('.content .header-content').height(chc);
-	tableCnt.height(chc-36-36-20);
+	tableCnt.height(chc-50);
 	var tableContent=$('.table-content .table');
 	//保持 th  td 宽度一致
 	var ths=$('.table-header th');
@@ -17,11 +17,11 @@ $(function(){
 	tds.width(function(index,width){
 		ths.eq(index).width(width);
 	});
-	function changeTDW(){
-		tds.width(function(index,width){
-			ths.eq(index).width(width);
-		});
-	}
+	var tableHeader=$('.table .table-header th');
+	tableCnt.scroll(function(){
+		var tableTop=tableCnt.scrollTop();
+		tableHeader.css('top',tableTop);
+	})
 	//按钮处理
 	var alertBox=$('.alert-box');
 	var headerTitle=$('.header-title',alertBox);
