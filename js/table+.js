@@ -10,14 +10,18 @@ $(function(){
 	var tableCnt=$('.content .table-content');
 	$('.content .header-content').height(chc);
 	tableCnt.height(chc-36-36-20);
-
+	var tableContent=$('.table-content .table');
 	//保持 th  td 宽度一致
 	var ths=$('.table-header th');
 	var tds=$('tr:first td',tableCnt);
 	tds.width(function(index,width){
 		ths.eq(index).width(width);
 	});
-	var tableContent=$('.table-content .table');
+	function changeTDW(){
+		tds.width(function(index,width){
+			ths.eq(index).width(width);
+		});
+	}
 	//按钮处理
 	var alertBox=$('.alert-box');
 	var headerTitle=$('.header-title',alertBox);
@@ -228,10 +232,13 @@ $(function(){
 				alertBox.css('display','none');
 			}
 			$(this).off()
+			changeTDW();
 		})
 		nobtn.click(function(){
 			alertBox.css('display','none');
+			changeTDW();
 			$(this).off()
 		})
+		
 	})
 });
