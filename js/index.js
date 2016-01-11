@@ -11,9 +11,6 @@ $(".left>ul>li>ul a").click(function(e){
 	 $(this).parent().find("ul").finish();
 	 $(this).parent().find("ul").slideToggle()
 })
-//如果点击的时候只有一个选项 并且是首页的话 将内容清空再生成
-//删除掉之后再点击没有问题
-//？ 已经其他选项 并且首页也在 并且是原本就有的
 $(".first").click(function(){
   if($(".sitem").length==1){
     if($(".righttopbut").length==1){
@@ -35,7 +32,7 @@ var flag=true;
 $(".left a[target=main]").click(function(){
   if(flag==true){
     flag=false;
-    if($(".righttopbut").length<10){
+ if($(".righttopbut").length<10){
 	if($(this).attr("target")=="main"){
 	var time=new Date().getTime();
     $(this).attr("target","t"+time);
@@ -59,6 +56,7 @@ $(".left a[target=main]").click(function(){
      }
  }
 }else{
+   $(this).attr("target","trash")
     alert("先关闭几个再打开吧")
 }
 var left=$(".dirleft")[0];
