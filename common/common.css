@@ -116,6 +116,7 @@ input,tr,td,th{
 	width: 70%;
 }
 .header .tables{
+	width: 100%;
 	border-top:1px solid #ddd;
 	border-right: 1px solid #ddd;
 }
