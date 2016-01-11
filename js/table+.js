@@ -1,4 +1,8 @@
 $(function(){
+	/*
+		处理窗口高度
+	*/
+
 	//设置 table 高度
 	var clientH=$(window).height();
 	var headerH=$('.header').height();
@@ -22,7 +26,21 @@ $(function(){
 		var tableTop=tableCnt.scrollTop();
 		tableHeader.css('top',tableTop);
 	})
-	//按钮处理
+
+
+
+/*
+&表格按钮 部分逻辑& 
+
+	添加按钮 ajax
+	查看按钮 
+	编辑按钮 ajax
+	删除按钮 ajax
+
+	showData() 函数 显示数据逻辑
+	editData() 函数 编辑数据逻辑
+*/
+	//元素获取
 	var alertBox=$('.alert-box');
 	var headerTitle=$('.header-title',alertBox);
 	var aths=$('.table-header th').not(":first").not(":last");
@@ -30,10 +48,12 @@ $(function(){
 	var contentTable=$('.tables',alertBox);
 	var nobtn=$('.input-button-no');
 	var yesbtn=$('.input-button-yes');
-	//编辑按钮
+	
+
+	//显示数据
 	var oldVal;
 	var flag;
-	//type 值 ： show  edit
+			//type 值 ： show  edit
 	function showData(td,type){
 		var tables=[];
 		var o=0;
@@ -56,6 +76,8 @@ $(function(){
 		})
 		contentTable.html(str);
 	}
+
+
 	//编辑提交数据 
 	function editData(){
 		var inputs=$('input',contentTable);
@@ -79,6 +101,9 @@ $(function(){
 			};
 			
 		});
+
+
+		//确认按钮
 		yesbtn.click(function(){
 			$(this).off()
 			if(flag){
@@ -110,6 +135,9 @@ $(function(){
 			}
 			flag=false;
 		})
+
+
+		//取消按钮
 		nobtn.click(function(){
 			$(this).off();
 			for(var i=0;i<oldVal.length;i++){
@@ -119,10 +147,12 @@ $(function(){
 			alertBox.css('display','none');
 		})
 	}
+
+
 	var nowInput;
 	var contents;
 	var urls;
-	//查看
+	//查看按钮
 	tableContent.on("click",'.view',function(){
 		contents=[];//存放内容 json
 		var that=this;
@@ -135,7 +165,9 @@ $(function(){
 			alertBox.css('display','none');
 		})
 	})
-	//编辑
+
+
+	//编辑按钮
 	tableContent.on("click",'.edit',function(){
 		contents=[];//存放内容 json
 		urls=$(this).attr('urls');
@@ -147,7 +179,9 @@ $(function(){
 		yesbtn.css('display','inline-block');
 		editData(atds);
 	});
-	//删除
+
+
+	//删除按钮
 	tableContent.on("click",".delete",function(){
 		headerTitle.html('编辑');
 		urls=$(this).attr('urls');
@@ -160,7 +194,9 @@ $(function(){
 		})
 		tr.remove();
 	})
-	//添加
+
+	
+	//添加按钮
 	$('.add-table').click(function(){
 		var that=this;
 		flag=false;
@@ -190,6 +226,7 @@ $(function(){
 				contents[$(this).data('a')]=vals;
 			};	
 		});
+		//确认按钮  ajax提交
 		yesbtn.click(function(){
 			if(flag){
 				var datas={};
@@ -232,13 +269,11 @@ $(function(){
 				alertBox.css('display','none');
 			}
 			$(this).off()
-			changeTDW();
 		})
+		//取消按钮
 		nobtn.click(function(){
 			alertBox.css('display','none');
-			changeTDW();
 			$(this).off()
-		})
-		
+		})	
 	})
 });
