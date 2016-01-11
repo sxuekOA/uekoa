@@ -168,7 +168,7 @@ body{
 .righttopdir{
    width:40px;height:35px;position: absolute;
    right:0;top:0;
-   background:#333; 
+   background:#222; 
    z-index: 998;
    display: none;
 }

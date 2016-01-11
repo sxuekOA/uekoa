@@ -11,6 +11,7 @@ h4{
 .contain{
 	width: 1029px;
 	height: auto;
+	min-height: 550px;
 	margin: 0 auto;
 	overflow: hidden;
 	background:#f5f5f5;
