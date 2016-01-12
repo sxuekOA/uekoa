@@ -11,66 +11,18 @@ $(".left>ul>li>ul a").click(function(e){
 	 $(this).parent().find("ul").finish();
 	 $(this).parent().find("ul").slideToggle()
 })
-$(".first").click(function(){
-  if($(".sitem").length==1){
-    if($(".righttopbut").length==1){
-    $(".righttopinner").empty();
-    $(".rightbottom").empty();
-    }else{
-     $(".sitem").remove();
-     $(".righttopbut").first().remove();  
-    }
-  } 
-})
+
 var innerleft=0;
 var range=0;
 var leftbtnarr={0:$(".first")}
 var itemarr={0:$(".item")};
 var btnarr={0:$(".righttopbut")};
 var aa=1;
-var flag=true;
-function del(){
-for (var i in btnarr){
-btnarr[i][0].index=i;
-btnarr[i][0].onclick=function(){
-  $(this).addClass("butactive").siblings().removeClass("butactive")
-  $(".item").css({zIndex:"0",display:"none"});
-  itemarr[this.index].css({zIndex:"1",display:"block"});  
-}
-$(btnarr[i]).find(".rrrclosebtn")[0].index=i; 
-$(btnarr[i]).find(".rrrclosebtn")[0].onclick=function(e){
-      var e=e||window.event;
-      e.stopPropagation()
-      e.cancleBubble=true; 
-      $(this).parent().remove();
-      $(itemarr[this.index]).remove()
-      $(leftbtnarr[this.index]).attr("target","main");
-      delete btnarr[this.index]
-      delete itemarr[this.index]
-      delete leftbtnarr[this.index]
-      $(".righttopbut:last").addClass("butactive").siblings().removeClass("butactive");
-       $(".item").last().css({zIndex:"1",display:"block"})
-      var width=($(".righttopbut").length)*151;
-      $('.righttopinner').css("width",width)
-      if(range>0){
-         range--;
-         innerleft+=150;
-         if(range==0){
-      $(".righttopdir").css("display","none")
-         }
-         $(".righttopinner").css({left:innerleft})
-         }
-      }
-   };
-}
-del();
 $(".left a[target=main]").click(function(){
-  if(flag==true){
-    flag=false;
  if($(".righttopbut").length<10){
-	if($(this).attr("target")=="main"){
+  if($(this).attr("target")=="main"){
 	var time=new Date().getTime();
-    $(this).attr("target","t"+time);
+  $(this).attr("target","t"+time);
 	$(".righttopbut").removeClass("butactive")
     var btnobj=$("<div class='righttopbut butactive'>"+$(this).text()+"<div class='rrrclosebtn'></div></div>");
 	$(".righttopinner").append(btnobj);
@@ -90,7 +42,7 @@ $(".left a[target=main]").click(function(){
      	$(".righttopdir").css("display","block")
      	$(".righttopinner").css({left:innerleft})
      }
- }
+   }
 }else{
    $(this).attr("target","trash")
     alert("先关闭几个再打开吧")
@@ -120,8 +72,43 @@ $(".left,.right").mousedown(function(e){
 	e.preventDefault();
 	e.returnValue=false;
 })
-del()
-console.log(range)
-flag=true;
+
+//选项卡及关闭按钮实现部分
+for (var i in btnarr){
+btnarr[i][0].index=i;
+btnarr[i][0].onclick=function(){
+  $(this).addClass("butactive").siblings().removeClass("butactive")
+  $(".item").css({zIndex:"0",display:"none"});
+  itemarr[this.index].css({zIndex:"1",display:"block"});  
 }
+$(btnarr[i]).find(".rrrclosebtn")[0].index=i; 
+$(btnarr[i]).find(".rrrclosebtn")[0].onclick=function(e){
+     if(this.indx!=0){
+      var e=e||window.event;
+      e.stopPropagation()
+      e.cancleBubble=true; 
+      $(this).parent().remove();
+      $(itemarr[this.index]).remove()
+      $(leftbtnarr[this.index]).attr("target","main");
+      delete btnarr[this.index]
+      delete itemarr[this.index]
+      delete leftbtnarr[this.index]
+      $(".righttopbut:last").addClass("butactive").siblings().removeClass("butactive");
+       $(".item").last().css({zIndex:"1",display:"block"})
+      var width=($(".righttopbut").length)*151;
+      $('.righttopinner').css("width",width)
+      if(range>0){
+         range--;
+         innerleft+=150;
+         if(range==0){
+      $(".righttopdir").css("display","none")
+         }
+         $(".righttopinner").css({left:innerleft})
+         }else{
+         $(".righttopdir").css("display","none") 
+         }
+      }
+    }
+   };
+//*******************************
 })
