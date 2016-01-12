@@ -44,9 +44,8 @@ $(".left a[target=main]").click(function(){
      }
    }
 }else{
-   $(this).attr("target","trash")
     alert("先关闭几个再打开吧")
-   $(this).attr("target","main")
+    return false;
 }
 var left=$(".dirleft")[0];
 var right=$(".dirright")[0];
