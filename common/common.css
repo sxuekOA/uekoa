@@ -71,7 +71,7 @@ input,tr,td,th{
 	border:1px solid #ddd;
 }*/
 .table-content{
-	overflow:auto;
+	overflow:auto;background:#fff;
 }
 .table-content .table{
 	border-top:0;

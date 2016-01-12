@@ -29,6 +29,41 @@ var itemarr={0:$(".item")};
 var btnarr={0:$(".righttopbut")};
 var aa=1;
 var flag=true;
+function del(){
+for (var i in btnarr){
+btnarr[i][0].index=i;
+btnarr[i][0].onclick=function(){
+  $(this).addClass("butactive").siblings().removeClass("butactive")
+  $(".item").css({zIndex:"0",display:"none"});
+  itemarr[this.index].css({zIndex:"1",display:"block"});  
+}
+$(btnarr[i]).find(".rrrclosebtn")[0].index=i; 
+$(btnarr[i]).find(".rrrclosebtn")[0].onclick=function(e){
+      var e=e||window.event;
+      e.stopPropagation()
+      e.cancleBubble=true; 
+      $(this).parent().remove();
+      $(itemarr[this.index]).remove()
+      $(leftbtnarr[this.index]).attr("target","main");
+      delete btnarr[this.index]
+      delete itemarr[this.index]
+      delete leftbtnarr[this.index]
+      $(".righttopbut:last").addClass("butactive").siblings().removeClass("butactive");
+       $(".item").last().css({zIndex:"1",display:"block"})
+      var width=($(".righttopbut").length)*151;
+      $('.righttopinner').css("width",width)
+      if(range>0){
+         range--;
+         innerleft+=150;
+         if(range==0){
+      $(".righttopdir").css("display","none")
+         }
+         $(".righttopinner").css({left:innerleft})
+         }
+      }
+   };
+}
+del();
 $(".left a[target=main]").click(function(){
   if(flag==true){
     flag=false;
@@ -40,6 +75,7 @@ $(".left a[target=main]").click(function(){
     var btnobj=$("<div class='righttopbut butactive'>"+$(this).text()+"<div class='rrrclosebtn'></div></div>");
 	$(".righttopinner").append(btnobj);
     btnarr[aa]=btnobj;
+    $(".item").css("display","none")
     var obj=$("<div class='item'><iframe src="+$(this).attr("href")+" name=t"+time+"></iframe></div>")
     $(".rightbottom").append(obj);
     itemarr[aa]=obj;
@@ -58,6 +94,7 @@ $(".left a[target=main]").click(function(){
 }else{
    $(this).attr("target","trash")
     alert("先关闭几个再打开吧")
+   $(this).attr("target","main")
 }
 var left=$(".dirleft")[0];
 var right=$(".dirright")[0];
@@ -66,48 +103,25 @@ var widths=$(".right").width();
 var n=0;
 left.onclick=function(){
     if(n>0){
-    n--;                            	
+    n--;    
+    range++;                        	
 	innerleft-=150;
-    $(".righttopinner").css({left:innerleft})
+    $(".righttopinner").animate({left:innerleft})
 }}
 right.onclick=function(){
    if(innerleft<0){ 
    n++;
+   range--;
 	innerleft+=150;
-  $(".righttopinner").css({left:innerleft})
+  $(".righttopinner").animate({left:innerleft})
 }
 }
 $(".left,.right").mousedown(function(e){
 	e.preventDefault();
 	e.returnValue=false;
 })
-for (var i in btnarr){
-btnarr[i][0].index=i;
-btnarr[i][0].onclick=function(){
-  $(this).addClass("butactive").siblings().removeClass("butactive")
-  $(".item").css("zIndex","0");
-  itemarr[this.index].css("zIndex","1");  
-}
-$(btnarr[i]).find(".rrrclosebtn")[0].index=i; 
-$(btnarr[i]).find(".rrrclosebtn")[0].onclick=function(){
-      $(this).parent().remove();
-      $(itemarr[this.index]).remove()
-      $(leftbtnarr[this.index]).attr("target","main");
-      delete btnarr[this.index]
-      delete itemarr[this.index]
-      delete leftbtnarr[this.index]
-      $(".righttopbut:last").addClass("butactive").siblings().removeClass("butactive");
-      $(itemarr[aa]).css("zIndex","1").siblings().css("zIndex","0")
-      var width=($(".righttopbut").length)*151;
-      $('.righttopinner').css("width",width)
-      if(range>0){
-         range--;
-         innerleft+=150;
-         $(".righttopdir").css("display","none")
-         $(".righttopinner").css({left:innerleft})
-         } 
-      }
-   };
-   flag=true;
+del()
+console.log(range)
+flag=true;
 }
 })
