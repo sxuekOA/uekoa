@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>考勤原始记录</title>
+	<title>答题原始记录</title>
 	<link rel="stylesheet" href="../common/common.css">
 	<!-- <link rel="stylesheet" href="../css/demo.css">
 	<link rel="stylesheet" href="../common/table.css">
@@ -38,82 +38,94 @@
       	    </label>
       	 </div>
       </div>
-      <div class="content">
-      	 <div class="header-title">考勤原始记录</div>
-      	 <div class="header-content">
-      	 <!-- 表头部分 开始-->
-      	 <div class="table-header">
-      	 	<table class="table text-l">
-      	 		<tr>
-					<th class="table-number">&nbsp;</th>
-					<th data-role="bh">编号</th>
-					<th data-role="nd">指纹编号</th>
-					<th data-role="tm">打卡时间</th>
-				</tr>
-      	 	</table>
-      	 </div>
-      	 <!-- 表头部分 结束-->
-      	 <!-- 表主体部分 开始-->
-      	 <div class="table-content">
-      	 	<table class="table text-l">
-      	 	<!-- 第1行 开始 -->	
-			<tr>
-				<td class="table-number">1</td> <!--编号-->
-				<td>1</td>
-				<td>1</td>
-				<td>2016-01-09 08:25:00</td>
-			</tr>
-			<!-- 第1行 结束 -->
+      <!-- -----表格部分复制开始--------- -->
+    <div class="content">
+      	<div class="header-title">表格</div>
+      	<div class="header-content">
+	      	 <!-- 表格部分 开始-->
+	      	 <div class="table-content">
+	      	 	<table class="table text-l">
+		      	 	<!-- 表头部分 结束-->
+		  	 		<tr class="table-header">
+						<th class="table-number">&nbsp;</th>
+						<th data-role="bh">编号</th>
+						<th data-role="nd">指纹编号</th>
+						<th data-role="tm">打卡时间</th>
+						<th>操作</th>
+					</tr>
+			      	 	
+					<!-- 表头部分 结束-->
+		      	 	<!-- 第1行 开始 -->	
+					<tr>
+						<td class="table-number">1</td> <!--编号-->
+						<td>1</td>
+						<td>2234844548</td>
+						<td>2016-01-11 08:23:12</td>
+						<td>
+						</td>
+					</tr>
+					<!-- 第1行 结束 -->
 
-			<!-- 第2行 开始 -->	
-			<tr>
-				<td class="table-number">2</td> <!--编号-->
-				<td>2</td>
-				<td>2</td>
-				<td>2016-01-09 08:25:00</td>
-			</tr>
-			<!-- 第2行 结束 -->
-			<tr>
-				<td class="table-number">3</td> <!--编号-->
-				<td>3</td>
-				<td>1</td>
-				<td>2016-01-09 08:25:00</td>
-			</tr>
-			<tr>
-				<td class="table-number">4</td> <!--编号-->
-				<td>4</td>
-				<td>1</td>
-				<td>2016-01-09 08:25:00</td>
-			</tr>
+					<!-- 第2行 开始 -->	
+					<tr>
+						<td class="table-number">1</td> <!--编号-->
+						<td>1</td>
+						<td>2234844548</td>
+						<td>2016-01-11 08:23:12</td>
+						<td>
+						</td>
+					</tr>
+					<!-- 第2行 结束 -->
+					<tr>
+						<td class="table-number">1</td> <!--编号-->
+						<td>1</td>
+						<td>2234844548</td>
+						<td>2016-01-11 08:23:12</td>
+						<td>
+						</td>
+					</tr>
 
-			<tr>
-				<td class="table-number">5</td> <!--编号-->
-				<td>5</td>
-				<td>5</td>
-				<td>2016-01-09 18:25:00</td>
-			</tr>
-		</table>
-      	 </div>
-      	 <!-- 表主体部分 结束-->
-		  <div class="table-footer">
-		  	<div class="button-bottom">
-			<select name="" id="" class="select">
-			<option value="">10</option>
-			<option value="">20</option>
-			<option value="">30</option>
-			</select>
-			<!-- <input type="button" class="input-button-down">
-			<input type="button" class="input-button-update"> -->
-			<input type="button" class="input-button-prev">
-			<span class="di">第</span>
-			<input type="text"class="input-text">
-			<span class="di">页</span>
-			<span class="di">共3页</span>
-			<input type="button" class="input-button-next">
-			<input type="button" class="input-button-refresh daxiao" value="">
+					<tr>
+						<td class="table-number">1</td> <!--编号-->
+						<td>1</td>
+						<td>2234844548</td>
+						<td>2016-01-11 08:23:12</td>
+						<td>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="table-number">1</td> <!--编号-->
+						<td>1</td>
+						<td>2234844548</td>
+						<td>2016-01-11 08:23:12</td>
+						<td>
+						</td>
+					</tr>
+				</table>
+	      	</div>
+      		<!-- 表格部分 结束-->
+			<!-- 翻页部分 开始-->
+			<div class="table-footer">
+				<div class="button-bottom">
+					<select name="" id="" class="select">
+						<option value="">10</option>
+						<option value="">20</option>
+						<option value="">30</option>
+					</select>
+					<input type="button" class="input-button-prev">
+					<span class="di">第</span>
+					<input type="text"class="input-text">
+					<span class="di">页</span>
+					<span class="di">共3页</span>
+					<input type="button" class="input-button-next">
+					<input type="button" class="input-button-refresh daxiao" value="">
+				</div>
 			</div>
-		  </div>
-      	 </div>
+			<!-- 翻页部分 结束-->
+      	</div>
+    </div>
+<!-- -----表格部分复制结束--------- -->
       </div>
 
 
@@ -161,6 +173,7 @@
       	 </div>	 
     	</div>
 </body>
+</html>
 <script src="../js/rome.js"></script>
 <script>
 	$(function(){
@@ -169,6 +182,5 @@
 		  $("#endTime").parent().css({"margin-left":"0","padding-left":"0"});
 		  rome(beginTime);
 		  rome(endTime);
-		})
+		}) 
 </script>
-</html>
